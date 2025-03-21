@@ -1,0 +1,19 @@
+.container{
+   width: 500px;
+   max-width: 0 auto; 
+   text-align: center; 
+}
+
+#count{
+    font-size:  30px;
+}
+button{
+    font-size:  18px;
+    padding:  10px 20px;
+    margin:  10px;
+}
+
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
