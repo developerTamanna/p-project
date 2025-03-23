@@ -1,0 +1,73 @@
+body {
+    background: #131b21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    background: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.flower {
+    width: 150px;
+    height: 150px;
+    transform: translateY(200px);
+    opacity: 0;
+    animation: moveUp 4s ease-in-out forwards;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: moveUp 4s ease-in-out forwards;
+}
+
+/* এনিমেশন ডিলে সেট করা হলো */
+.card:nth-child(2) .flower, .card:nth-child(2) .name {
+    animation-delay: 1s;
+}
+.card:nth-child(3) .flower, .card:nth-child(3) .name {
+    animation-delay: 2s;
+}
+.card:nth-child(4) .flower, .card:nth-child(4) .name {
+    animation-delay: 3s;
+}
+
+/* ফুল ও নাম ওঠার এনিমেশন */
+@keyframes moveUp {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(80px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
